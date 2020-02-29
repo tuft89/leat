@@ -43,7 +43,10 @@ func romanToInt(s string) int {
                     sum = sum + 50
             } else if runes[i] == rune('D') {
                     sum = sum + 500
+            } else if runes[i] == rune('M') {
+                    sum = sum + 1000
             }
+
         } 
     }
 return sum
