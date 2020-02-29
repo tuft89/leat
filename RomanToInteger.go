@@ -25,15 +25,15 @@ func romanToInt(s string) int {
             }
 
         } else {
-            if runes[i] == rune('I') && (runes[i-1] != rune('V') || runes[i-1] != rune('X')) {
+            if runes[i] == rune('I') && (runes[i-1] != rune('V') && runes[i-1] != rune('X')) {
                 sum = sum + 1
             } else if runes[i] == rune('I') && (runes[i-1] == rune('V') || runes[i-1] == rune('X')) {   
                 sum = sum - 1
-            } else if runes[i] == rune('X') && (runes[i-1] != rune('L') || runes[i-1] != rune('C')) {
+            } else if runes[i] == rune('X') && (runes[i-1] != rune('L') && runes[i-1] != rune('C')) {
                    sum = sum + 10
             } else if runes[i] == rune('X') && (runes[i-1] == rune('L') || runes[i-1] == rune('C')) {
                     sum = sum - 10
-            } else if runes[i] == rune('C') && (runes[i-1] != rune('D') || runes[i-1] != rune('M')) {
+            } else if runes[i] == rune('C') && (runes[i-1] != rune('D') && runes[i-1] != rune('M')) {
                     sum = sum + 100
             } else if runes[i] == rune('C') && (runes[i-1] == rune('D') || runes[i-1] == rune('M')) {
                     sum = sum - 100 
